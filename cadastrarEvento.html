@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>Cadastro de Eventos</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -9,8 +9,8 @@
 <body>
 
 <div class="headerad">
-  <h1>Header</h1>
-  <p>Resize the browser window to see the responsive effect.</p>
+  <h1>Cadastro de Eventos</h1>
+  
 </div>
 
 <div class="topnav">
@@ -25,20 +25,27 @@
 
 <div class="row">
   <div class="column side">
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    
   </div>
   <div class="column middle">
-    <h2>Main Content</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-  </div>
+    
+		<form>
+			Nome do evento:<br>
+			<input type="text" name="nome"><br><br>
+			Data do evento:<br>
+			<input type="text" name="dia" size="2" maxlength="2" value="dd"> 
+			<input type="text" name="mes" size="2" maxlength="2" value="mm"> 
+			<input type="text" name="ano" size="4" maxlength="4" value="aaaa"><br><br>
+			Descrição:<br>
+			<textarea name="message" rows="10" cols="60"></textarea><br><br>
+			<input type="submit" value="Cadastrar">
+			<input type="reset" value="Apagar Campos">
+			</form></div></div>
   <div class="column side">
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    
   </div>
 </div>
-
+<br><br><br><br><br><br><br>
 <div class="footer">
   <p>Footer</p>
 </div>
