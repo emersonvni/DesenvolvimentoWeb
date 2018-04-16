@@ -98,24 +98,6 @@ body {
     text-align: center;
 }
 
-.col.esquerdo h2{
-    text-align: center;
-}
-
-.col.centro {
-    text-align: justify;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-.col.centro a{
-    display: block;
-    text-align: left;
-    color: #f2f2f2;
-    text-decoration: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
 /* Left and right column */
 .column.side {
     width: 25%;
@@ -138,6 +120,17 @@ body {
     content: "";
     display: table;
     clear: both;
+}
+
+.row {
+    text-align: center;
+}
+
+.inicio img{
+    float: right;
+    height: auto;
+    width: 50%;
+
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
