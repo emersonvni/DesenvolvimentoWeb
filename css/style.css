@@ -87,24 +87,40 @@ body {
     padding: 10px;
 }
 
+.col {
+    display: inline-grid;
+    width: 25%;
+    border: 3px solid #73AD21;
+    color: #f2f2f2;
+}
+
+.col.centro {
+    text-align: justify;
+}
+.col.centro a{
+    display: block;
+    text-align: left;
+    color: #f2f2f2;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 /* Left and right column */
 .column.side {
     width: 25%;
 }
 
 .colunaAnuncio{
-    float: center;
     width: 70%;
+    margin-right: auto;
+    margin-left: auto;
 
 }
 
 /* Middle column */
 .column.middle {
     width: 50%;
-}
-
-#txtCenter{
-    text-align: center;
 }
 
 /* Clear floats after the columns */
@@ -116,14 +132,14 @@ body {
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-    .column.side, .column.middle/*, .colunaAnuncio*/ {
+    .column.side, .column.middle {
         width: 100%;
     }
 }
 
 /* Style the footer */
 .footer {
-    background-color: #f1f1f1;
+    background-color: #2F4F4F;
     padding: 10px;
     text-align: center;
 }
