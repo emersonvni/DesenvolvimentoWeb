@@ -88,11 +88,16 @@ body {
 }
 
 .col {
+    background-color: #f1f1f1;
     display: inline-grid;
-    width: 25%;
-    color: #f2f2f2;
+    width: 20%;
     text-align: justify;
+    margin:20px 0px 20px 20px;
+    padding: 20px;
+    border: 3px solid #2F4F4F;
+    text-align: center;
 }
+
 .col.esquerdo h2{
     text-align: center;
 }
@@ -147,4 +152,5 @@ body {
     background-color: #2F4F4F;
     padding: 10px;
     text-align: center;
+    color: #f2f2f2;
 }
