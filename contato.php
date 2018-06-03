@@ -9,13 +9,13 @@
 <body>
 
 <div class="topnav">
-  <a href="index.html">Home</a>
-  <a href="sobre.html">Institucional</a>
-  <a href="contato.html">Fale Conosco</a>
-  <a href="anuncio.html">Anúncios</a>
-  <a href="login.html">Login</a>
-  <a href="cadastrarUsuario.html">Cadastrar Usuário</a>
-  <a href="cadastrarEvento.html">Cadastrar Evento</a>
+    <a href="index.php">Home</a>
+    <a href="sobre.php">Institucional</a>
+    <a href="contato.php">Fale Conosco</a>
+    <a href="anuncio.php">Anúncios</a>
+    <a href="login.php">Login</a>
+    <a href="cadastrarUsuario.php">Cadastrar Usuário</a>
+    <a href="cadastrarEvento.php">Cadastrar Evento</a>
 </div>
 
 <div class="headerad">
@@ -42,15 +42,11 @@
 	<p>Segunda a sexta, de 8:00 às 17:30</p>
 
 	<h2>Enviar Mensagem:</h2>
-    <form>
-	  Seu Nome:<br>
-	  <input type="text" name="nome"><br><br>
-	  Seu E-mail:<br>
-	  <input type="text" name="email"><br><br>
-	  Assunto:<br>
-	  <input type="text" name="assunto"><br><br>
-	  Mensagem:<br>
-	  <input type="text" name="mensagem"><br><br>
+    <form method="post" action="controller\controllerContato.php">
+	  <input type="text" name="nome" placeholder="Nome"><br><br>
+	  <input type="text" name="email" placeholder="E-mail"><br><br>
+	  <input type="text" name="assunto" placeholder="Assunto"><br><br>
+	  <input type="text" name="mensagem" placeholder="Mensagem"><br><br>
 	  <input type="submit">
 	</form>
   </div>
