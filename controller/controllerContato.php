@@ -1,8 +1,9 @@
 <?php
-    validarEmail();
+
+    enviarEmail();
+    //header('Location: ../contato.php');
 
     function test_input($data){
-        echo("test_input\n");
         //Retira espaço no ínicio e final de uma string
         $data = trim($data);
         //Remove barras invertidas de uma string.
@@ -13,51 +14,72 @@
     }
 
     function getNome(){
-        echo("getNome\n");
-        return $_POST["nome"];
+        if (empty($_POST["nome"])){
+            echo ("ERRO: Campo 'Nome' em branco! Por favor, preencha todos os campos obrigatórios.");
+            return false;
+        }
+        else {
+            return test_input($_POST["nome"]);
+        }
     }
 
     function getEmail(){
-        echo("getEmail\n");
-        return $_POST["email"];
-    }
-    function getAssunto(){
-        echo("getAssunto\n");
-        return $_POST["assunto"];
-    }
 
-    function getMensagem(){
-        echo("getMensagem\n");
-        return $_POST["mensagem"];
-    }
-
-    function validarEmail(){
-        echo("validarEmail\n");
-        // Remove todos os caracteres, exceto letras, dígitos e ! # $% & '* + - =? ^ _ `{|} ~ @. [] .
-        $email = filter_var(getEmail(), FILTER_SANITIZE_EMAIL);
-        //Remove espaços em branco e etc.
-        $email = test_input($email);
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-
-            if (isset($email)){
-                echo ("Campo E-mail em branco! Este campo é obrigatorio.");
+        if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+            if (empty($_POST["email"])){
+                echo ("ERRO: Campo 'Email' em branco! Por favor, preencha todos os campos obrigatórios.");
+                return false;
             }
-            else {
-                echo ( "Formato do e-mail é inválido!");
+            else{
+                echo ("ERRO: Formato de e-mail inválido! Por favor, informe um email válido.");
+                return false;
             }
         }
         else{
-            //Valida o dominio
-            $dominio = explode('@',$email);
+            $dominio = explode('@',$_POST["email"]);
             if(!checkdnsrr($dominio[1],'A')){
-                $mensagem = 'E-mail inválido!';
-                echo($mensagem);
-                return $mensagem;
+                echo ("ERRO: E-mail inválido! Por favor, informe um email válido.");
+                return false;
             }
             else{
-                echo ("$email is a valid email address");
-                //return true; // Retorno true para indicar que o e-mail é valido
+                // "$email é válido
+                return test_input($_POST["email"]);
             }
+        }
+    }
+
+    function getAssunto(){
+        if (empty($_POST["assunto"])){
+            echo ("ERRO: Campo 'Assunto' em branco! Por favor, preencha todos os campos obrigatórios.");
+            return false;
+        }
+        else {
+            return test_input($_POST["assunto"]);
+        }
+    }
+
+    function getMensagem(){
+        if (empty($_POST["mensagem"])){
+            echo ("ERRO: Campo 'Mensagem' em branco! Por favor, preencha todos os campos obrigatórios.");
+            return false;
+        }
+        else {
+            return test_input($_POST["mensagem"]);
+        }
+    }
+
+    function enviarEmail(){
+        if ((getAssunto() != false) && (getNome() != false) && (getMensagem() != false) && (getEmail() != false)) {
+            $assunto = getAssunto();
+            $corpo = "
+            Assunto: " . getAssunto() . "
+            Nome: " . getNome() . "
+            Email: " . getEmail() . "
+            Mensagem " . getMensagem() . "
+            ";
+            mail('brennojustino2008@gmail.com', $assunto, $corpo, 'From: brennojustino2008@hotmail.com');
+            echo 'Email enviado com sucesso!';
+            header('Location: ../contato.php');
         }
     }
 

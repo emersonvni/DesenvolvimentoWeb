@@ -42,11 +42,13 @@
 	<p>Segunda a sexta, de 8:00 às 17:30</p>
 
 	<h2>Enviar Mensagem:</h2>
+      <span class= "erro">Campo obrigatório *</span>
     <form method="post" action="controller\controllerContato.php">
-	  <input type="text" name="nome" placeholder="Nome"><br><br>
-	  <input type="text" name="email" placeholder="E-mail"><br><br>
-	  <input type="text" name="assunto" placeholder="Assunto"><br><br>
-	  <input type="text" name="mensagem" placeholder="Mensagem"><br><br>
+
+	  <input type="text" name="nome" placeholder="Nome*">
+	  <input type="text" name="email" placeholder="E-mail*">
+	  <input type="text" name="assunto" placeholder="Assunto*">
+        <textarea name="mensagem" placeholder="Mensagem*" class="msg" ></textarea><br><br>
 	  <input type="submit">
 	</form>
   </div>
