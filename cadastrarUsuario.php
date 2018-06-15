@@ -27,21 +27,21 @@
   
   <div>
     	
-			<form>
+			<form method="post" action="controller\controllerUsuario.php">
+			  <br><br><br><br>
 			  Nome:<br>
-			  <input type="text" name="nome"><br><br>
-			  Sobrenome:<br>
-			  <input type="text" name="sobrenome"><br><br>
-			  Informe o nome de usuário:<br>
-			  <input type="text" name="nomeDeUsuario"><br><br>
+			  <input type="text" name="nome"><br><br>	
 			  Informe o E-mail:<br>
-			  <input type="text" name="email"><br><br>
+			  <input type="text" name="email"><br><br>			  
+			  Login:<br>
+			  <input type="text" name="login"><br><br>			  
 			  Digite a senha:<br>
-			  <input type="password" name="senha"><br><br>
-			  Confirmação de senha:<br>
-			  <input type="password" name="confirmaSenha"><br><br>
+			  <input type="password" name="senha"><br><br>			  
 			  <input type="submit" value="Cadastrar">
 			  <input type="reset" value="Apagar Campos">
+			 
+			 
+
 			</form></div>
   
 </div>
