@@ -5,8 +5,10 @@
 </head>
 <body>
 <form name="searchform" method="post" action="resultado.php">
+	<br><br>
 	<center>Pesquisar usuário: <input type="text" name="buscar" /></center>
-	<input type="submit" value="Buscar">
+	<br><br>
+	<center><input type="submit" value="Buscar"></center>
 </form>
 </body>
 </html>

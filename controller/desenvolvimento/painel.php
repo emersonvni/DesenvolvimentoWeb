@@ -9,7 +9,11 @@
 		exit;
 	}else
 	{
+		echo "<br><br>";
 		echo "<center><strong>Você está Logado! :D</strong> </center>";
+		echo "<br><br>";
+		echo "<center><a href=\"busca.php\">Buscar e Editar</a></center>";
+			
 	}
 ?>
 
