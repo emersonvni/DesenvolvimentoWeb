@@ -11,9 +11,9 @@
 <body>
 <form name="searchform" method="post" action="resultado.php">
 	
-	<center>Pesquisar usuário: <input type="text" name="buscar" /></center>
+	Pesquisar usuário: <input type="text" name="buscar" />
 	
-	<center><input type="submit" value="Buscar"></center>
+	<input type="submit" value="Buscar">
 </form>
 </body>
 </html>
