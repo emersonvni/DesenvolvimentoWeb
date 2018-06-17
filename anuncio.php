@@ -66,7 +66,7 @@
 
                 Esse ano a turma de 2014/1 recepciona os calouros da Engenharia Química e de todos os cursos,
                 com muita cerveja (muita mesmo) e muita música, em 2 dias de rock... </p>
-            <a href="anuncio1.html">Mais informações</a>
+            <a href="anuncio1.php">Mais informações</a>
         </div>
 
         <div class="col">
