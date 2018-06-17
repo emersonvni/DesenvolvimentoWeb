@@ -117,6 +117,9 @@ textarea{
     text-align: center;
 }
 
+.col input{
+    width: 80%;
+}
 .col img{
     width: 100%;
     height: auto;

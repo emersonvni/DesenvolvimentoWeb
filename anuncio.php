@@ -56,33 +56,6 @@
 
             }
         ?>
-
-        <div class="col">
-            <h2>8ª CALOURADA DE ENGENHARIA QUÍMICA</h2>
-
-            <a href="#" align="center"><img src="img/img3.jpg" alt="" /></a>
-            <p>Vem aí mais uma edição da maior calourada do sul do estado:
-                8ª CALOURADA DE ENGENHARIA QUÍMICA
-
-                Esse ano a turma de 2014/1 recepciona os calouros da Engenharia Química e de todos os cursos,
-                com muita cerveja (muita mesmo) e muita música, em 2 dias de rock... </p>
-            <a href="anuncio1.html">Mais informações</a>
-        </div>
-
-        <div class="col">
-            <h2>Anuncio 2</h2>
-            <a href="#"><img src="img/img4.jpg" alt="" /></a>
-            <p>Descrição</p>
-            <a href="#">Mais informações</a>
-
-        </div>
-        <div class="col">
-            <h2>Anuncio 3</h2>
-                <a href="#"><img src="img/img5.jpg" alt="" /></a>
-                <p>Descrição</p>
-                <a href="#">Mais informações</a>
-            </div>
-        <!-- </div> -->
   </div>
 </div>
     </div>
