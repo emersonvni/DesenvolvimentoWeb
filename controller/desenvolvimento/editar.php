@@ -25,6 +25,7 @@
 				Status: <input name=\"status\" type=\"text\" id=\"id\" value=\"$status\" size=\"35\"/><br><br>
 				
 				<input type=\"submit\" onclick=\"return confirm('Deseja mesmo editar esse registro?');\" name=\"Submit\" value=\"SALVAR ALTERAÇÕES\"/>
+				
 				</form>
 			";
 		}
