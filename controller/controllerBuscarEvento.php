@@ -32,8 +32,10 @@ echo'
             <input type="file" name="arquivo" accept="image/*"/><br><br>
             Descrição:<br>
             <textarea id="area" name="descricao" required rows="10" cols="60">'.$descricao.'</textarea><br><br>
-            <input type="submit" value="Salvar">
+            <input type="submit" name="escolha" value="Salvar">
+            <input type="submit" name="escolha" value="Excluir Evento">
             <input type="button" value="Voltar" onClick="history.go(-1)">
     </form>
 	';
 ?>
+
