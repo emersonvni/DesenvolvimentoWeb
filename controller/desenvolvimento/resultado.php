@@ -1,6 +1,9 @@
 <?php
 	include "conexao.php";
 ?>
+<?php
+	include "../../topnav.php";
+?>
 <html>
 <head>
 	<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -16,13 +19,14 @@
 	{
 		while($linha = mysqli_fetch_array($sql))
 		{
+			
 			$nome= $linha['nome'];
             $id= $linha['id'];
 			$endereco=$linha['endereco'];
 			$email=$linha['email'];
 			$status=$linha['status'];
 			echo "
-            <div class='col'>
+            <br><br><center><div class='col'>
                 <br /><br />
                 <center><strong>Nome:</strong>".@$nome."			
                 <br /><br />
@@ -44,7 +48,7 @@
                     <input type='hidden' name='id' value='".$id."'>
                     <input type='submit' name='excluir' value='Excluir'>
                 </form>
-              </div>
+              </div></center>
             ";
 		}
 	}else

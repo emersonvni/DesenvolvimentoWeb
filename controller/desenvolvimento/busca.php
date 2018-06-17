@@ -1,3 +1,7 @@
+<?php
+	include "../../topnav.php";
+?>
+
 <html>
 <head>
 	<title>Sistema de busca</title>
@@ -5,7 +9,7 @@
 </head>
 <body>
 <form name="searchform" method="post" action="resultado.php">
-	<br><br>
+	<br><br><br><br>
 	<center>Pesquisar usuário: <input type="text" name="buscar" /></center>
 	<br><br>
 	<center><input type="submit" value="Buscar"></center>
