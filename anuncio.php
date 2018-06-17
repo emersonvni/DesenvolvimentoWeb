@@ -24,6 +24,35 @@
 </div>
 
 	<div class="row">
+        <?php
+            // Aqui você se conecta ao banco
+            $conecta = mysqli_connect('localhost', 'root', '');
+            mysqli_select_db($conecta, 'database');
+
+            // Executa uma consulta
+            //$busca = mysqli_query($conecta,"SELECT * FROM evento");
+            $sql = "SELECT * FROM evento";
+            $query = $conecta->query($sql);
+            while ($registro = $query->fetch_assoc()) {
+                $nome = $registro['nome'];
+                $descricao = $registro['descricao'];
+                $arquivo = $registro['imagem'];
+                $data = $registro['data'];
+
+                echo '
+                    <div class="col">
+                    <h2>'.$nome.'</h2>
+        
+                    <a href="#" align="center"><img src="uploads/'.$arquivo.'" alt="Imagem" /></a>
+                    <p>'.$descricao.' </p>
+                    <p>Data e Hora: '.$data.'</p>
+                    <a href="anuncio1.html">Mais informações</a>
+                    </div>
+                ';
+
+
+            }
+        ?>
 
         <div class="col">
             <h2>8ª CALOURADA DE ENGENHARIA QUÍMICA</h2>
