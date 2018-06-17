@@ -2,6 +2,9 @@
 	include "conexao.php";
 ?>
 <?php
+	include "../../topnav.php";
+?>
+<?php
 	session_start();
 	if(!isset($_SESSION["email"]) || !isset($_SESSION["senha"]))
 	{
@@ -9,7 +12,7 @@
 		exit;
 	}else
 	{
-		echo "<br><br>";
+		echo "<br><br><br>";
 		echo "<center><strong>Você está Logado! :D</strong> </center>";
 		echo "<br><br>";
 		echo "<center><a href=\"busca.php\">Buscar e Editar</a></center>";
