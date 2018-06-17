@@ -46,7 +46,10 @@
                     <a href="#" align="center"><img src="uploads/'.$arquivo.'" alt="Imagem" /></a>
                     <p>'.$descricao.' </p>
                     <p>Data e Hora: '.$data.'</p>
-                    <a href="anuncio1.html">Mais informações</a>
+                    <form action="anuncio1.php" method="post">
+                        <input type="hidden" name="nome" value="'.$nome.'">
+                        <input type="submit" value="Mais informações">
+                    </form>
                     </div>
                 ';
 

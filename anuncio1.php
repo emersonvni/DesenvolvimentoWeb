@@ -9,84 +9,57 @@
 <body>
 
 <div class="topnav">
-  <a href="index.html">Home</a>
-  <a href="sobre.html">Institucional</a>
-  <a href="contato.html">Fale Conosco</a>
-  <a href="anuncio.html">Anúncios</a>
-  <a href="login.html">Login</a>
-  <a href="cadastrarUsuario.html">Cadastrar Usuário</a>
-  <a href="cadastrarEvento.html">Cadastrar Evento</a>
+  <a href="index.php">Home</a>
+  <a href="sobre.php">Institucional</a>
+  <a href="contato.php">Fale Conosco</a>
+  <a href="anuncio.php">Anúncios</a>
+  <a href="login.php">Login</a>
+  <a href="cadastrarUsuario.php">Cadastrar Usuário</a>
+  <a href="cadastrarEvento.php">Cadastrar Evento</a>
 </div>
 
 <div class="headerad">
   <h1>Anúncios</h1>
-
 </div>
-
-
-
-
 	<div class="row">
 		<div class="column side">
-			<h2></h2>
-			<p></p>
 		</div>
 		<div class="column middle">
 			<div align="center">
-			
-				<section>
-					<header>
-							<h2>8ª CALOURADA DE ENGENHARIA QUÍMICA</h2>
-					</header>
-					
-						<a href="#" align="center"><img src="img/img3.jpg" alt="" /></a>
-						<pre>Vem aí mais uma edição da maior calourada do sul do estado:
-8ª CALOURADA DE ENGENHARIA QUÍMICA
 
-Esse ano a turma de 2014/1 recepciona os calouros da Engenharia Química e de todos os cursos,
-com muita cerveja (muita mesmo) e muita música, em 2 dias de rock. 
+                <?php
+                // Aqui você se conecta ao banco
+                $conecta = mysqli_connect('localhost', 'root', '');
+                mysqli_select_db($conecta, 'database');
 
-Dias 04 e 05 de maio, no Chácara Clube, a gente espera você com seus parceiros de copo para curtir
-e ter mais história para contar, porque essa calourada vai dar o que falar e muita história para guardar!!
+                // Executa uma consulta
+                $nome = $_POST['nome'];
+                $busca = mysqli_query($conecta,"SELECT * FROM evento WHERE nome = '$nome'");
+                $registro = mysqli_fetch_array($busca);
 
-04/05, sexta feira, às 23h (+16)
-05/05, sábado, às 17h - OPEN BAR (+18)
 
-Atrações:
-ArtSamba
-Dj Boka
-+ atrações a serem divulgadas
+                $descricao = $registro['descricao'];
+                $arquivo = $registro['imagem'];
+                $data = $registro['data'];
 
-Bebidas do OPEN BAR:
-Cerveja Brahma
-Gummy
-Canelinha
-Xixa 
-Flamejante
-Graviolinha 
-Sex on the beach
-+ bebidas surpresa
+                    echo '
 
-Lote promocional: R$ 30,00 (ESGOTADO)
-1º lote: R$ 35,00 (ESGOTADO)
-2º lote: R$ 40,00
-3º lote: R$ 45,00
-
-PONTOS DE VENDA:
-Alegre - Unicopy e Trailer du Robson
-Cachoeiro - em breve
-Castelo - em breve
-
-VENDA DE INGRESSOS PELO SITE:
-<a href="http://www.sympla.com.br/8-calourada-da-engenharia-quimica---ufes__263232">Sympla</a></pre>
-						
-				</section>
+                        <section>
+                            <header>
+                                    <h2>'.$nome.'</h2>
+                            </header>
+                            
+                                <a href="#" align="center"><img src="uploads/'.$arquivo.'" alt="Imagem" /></a>
+                                <pre>'.$descricao.'</pre>
+                                <pre><strong>Dia: '.substr($data,0,10).' Hora de Início:'.substr($data,11,5).'</strong></pre>
+                                
+                        </section>
+                                ';
+                ?>
 			</div align="center">
 			
 		</div>
 		<div class="column side">
-			<h2></h2>
-			<p></p>
 		</div>
   </div>
 </div>
