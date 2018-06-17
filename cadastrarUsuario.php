@@ -27,14 +27,14 @@
   
   <div>
     	
-			<form method="post" action="controller\controllerUsuario.php">
+			<form name="login" method="post" action="controller\desenvolvimento\cadastrando.php">
 			  <br><br><br><br>
 			  Nome:<br>
 			  <input type="text" name="nome"><br><br>	
+			  Endereço:<br>
+			  <input type="text" name="endereco"><br><br>	
 			  Informe o E-mail:<br>
-			  <input type="text" name="email"><br><br>			  
-			  Login:<br>
-			  <input type="text" name="login"><br><br>			  
+			  <input type="text" name="email"><br><br>				  		  
 			  Digite a senha:<br>
 			  <input type="password" name="senha"><br><br>			  
 			  <input type="submit" value="Cadastrar">

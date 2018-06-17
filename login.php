@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Sistema de Login</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -26,13 +26,16 @@
 <div class="row" align="center">
   <div align="center">
     <br><br>
-		Nome de Usuário:<br>
-		<input type="text" name="nomeDeUsuario"><br><br>
-		Senha:<br>
-		<input type="password" name="senha"><br><br>
-		<input type="submit" value="Entrar">
-		<input type="submit" value="Cancelar">
-		
+		<form name="loginform" method="post" action="controller\desenvolvimento\autenticacao.php">
+			<br><br><br>
+			Email:<br>
+			<input type="text" name="email"><br><br>
+			Senha:<br>
+			<input type="password" name="senha"><br><br>
+			<input type="submit" value="Entrar">
+			<input type="submit" value="Cancelar">
+		</form>
+			
   </div>
   
 </div>

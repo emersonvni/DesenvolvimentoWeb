@@ -30,6 +30,7 @@
   <div class="column middle">
     
 		<form method="post" action="controller\controllerCadastrarEvento.php" enctype="multipart/form-data">
+			<br><br><br>
 			Nome:<br>
 			<input type="text" required name="nome" placeholder="Nome*"><br><br>
             Data:
