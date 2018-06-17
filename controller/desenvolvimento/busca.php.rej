@@ -1,0 +1,10 @@
+diff a/controller/desenvolvimento/busca.php b/controller/desenvolvimento/busca.php	(rejected hunks)
+@@ -10,7 +10,7 @@
+ </head>
+ <body>
+ <form name="searchform" method="post" action="resultado.php">
+-	<br><br><br><br>
++	
+ 	<center>Pesquisar usuário: <input type="text" name="buscar" /></center>
+ 	<br><br>
+ 	<center><input type="submit" value="Buscar"></center>
