@@ -133,7 +133,7 @@ function getOpcao(){
 }
 
 function getEscolha(){
-    if ($_POST["escolha"] == "Salvar"){
+    if ($_POST["escolha"] == "Salvar Alterações"){
         return true;
     }
     else {
