@@ -1,23 +1,24 @@
 <?php
-	include "busca\conexao.php";
+	include "conexao.php";
 ?>
 <?php
 	session_start();
 	if(!isset($_SESSION["email"]) || !isset($_SESSION["senha"]))
 	{
-		header("Location: login.php");
+		header("Location: ../../login.php");
 		exit;
 	}else
 	{
-		echo "<center>Você está Logado! :D</center>";
+		echo "<center><strong>Você está Logado! :D</strong> </center>";
 	}
 ?>
 
 <html>
 <head>
+<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <title>Painel</title>
 </head>
 <body>
-	<a href="logout.php">Logout</a>
+	<center><a href="logout.php">Logout</a></center>
 </body>
 </html>
