@@ -17,20 +17,35 @@
 		while($linha = mysqli_fetch_array($sql))
 		{
 			$nome= $linha['nome'];
+            $id= $linha['id'];
 			$endereco=$linha['endereco'];
 			$email=$linha['email'];
 			$status=$linha['status'];
-			echo "<br /><br />";
-			echo "<center><strong>Nome:</strong>".@$nome;			
-			echo "<br /><br />";
-			echo "<strong>Endereço:</strong>".@$endereco;
-			echo "<br /><br />";
-			echo "<strong>Email:</strong>".@$email;
-			echo "<br /><br />";			
-			echo "<strong>Status:</strong>".@status;
-			echo "<br /><br />";
-			echo "<a href='editar.php'> Editar usuario</a></center>";
-			echo "<br /> <hr />";
+			echo "
+            <div class='col'>
+                <br /><br />
+                <center><strong>Nome:</strong>".@$nome."			
+                <br /><br />
+                <strong>Endereço:</strong>".@$endereco."
+                <br /><br />
+                <strong>Email:</strong>".@$email."
+                <br /><br />			
+                <strong>Status:</strong>".@status."
+                <br /><br />
+                <form action='editar.php' method='post'>
+                    <input type='hidden' name='id' value='".$id."'>
+                    <input type='hidden' name='nome' value='".$nome."'>
+                    <input type='hidden' name='endereco' value='".$endereco."'>
+                    <input type='hidden' name='email' value='".$email."'>
+                    <input type='hidden' name='status' value='".$status."'>
+                    <input type='submit' name='editar' value='Editar'>
+                </form>
+                <form action='excluir.php' method='post'>
+                    <input type='hidden' name='id' value='".$id."'>
+                    <input type='submit' name='excluir' value='Excluir'>
+                </form>
+              </div>
+            ";
 		}
 	}else
 	{
