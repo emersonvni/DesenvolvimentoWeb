@@ -56,6 +56,7 @@
 
             }
         ?>
+<<<<<<< HEAD
 
         <div class="col">
             <h2>8ª CALOURADA DE ENGENHARIA QUÍMICA</h2>
@@ -83,6 +84,8 @@
                 <a href="#">Mais informações</a>
             </div>
         <!-- </div> -->
+=======
+>>>>>>> 6244f29c0052c705c8aae7863141bdfa37a1beb1
   </div>
 </div>
     </div>

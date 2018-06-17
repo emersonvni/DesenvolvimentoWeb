@@ -52,7 +52,6 @@
                                 <a href="#" align="center"><img src="uploads/'.$arquivo.'" alt="Imagem" /></a>
                                 <pre>'.$descricao.'</pre>
                                 <pre><strong>Dia: '.substr($data,0,10).' Hora de Início:'.substr($data,11,5).'</strong></pre>
-                                
                         </section>
                                 ';
                 ?>
