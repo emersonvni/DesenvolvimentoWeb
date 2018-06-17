@@ -45,10 +45,10 @@
       <span class= "erro">Campo obrigatório *</span>
     <form method="post" action="controller\controllerContato.php">
 
-	  <input type="text" name="nome" placeholder="Nome*">
-	  <input type="text" name="email" placeholder="E-mail*">
-	  <input type="text" name="assunto" placeholder="Assunto*">
-        <textarea name="mensagem" placeholder="Mensagem*" class="msg" ></textarea><br><br>
+	  <input type="text" required name="nome" placeholder="Nome*">
+	  <input type="email" required name="email" placeholder="E-mail*">
+	  <input type="text" required name="assunto" placeholder="Assunto*">
+        <textarea required name="mensagem" placeholder="Mensagem*" class="msg" ></textarea><br><br>
 	  <input type="submit">
 	</form>
   </div>

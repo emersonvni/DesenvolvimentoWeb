@@ -15,6 +15,13 @@ textarea{
     width: 100%;
     height: 100px;
 }
+
+.datas{
+    width:20%;
+}
+.horas{
+    width:12%;
+}
 .erro{
     color: #FF0000 ;
 }

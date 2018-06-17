@@ -29,17 +29,17 @@
   </div>
   <div class="column middle">
     
-		<form>
-			Nome do evento:<br>
-			<input type="text" name="nome"><br><br>
-			Data do evento:<br>
-			<input type="text" name="dia" size="2" maxlength="2" value="dd"> 
-			<input type="text" name="mes" size="2" maxlength="2" value="mm"> 
-			<input type="text" name="ano" size="4" maxlength="4" value="aaaa"><br><br>
+		<form method="post" action="controller\controllerCadastrarEvento.php" enctype="multipart/form-data">
+			Nome:<br>
+			<input type="text" required name="nome" placeholder="Nome*"><br><br>
+            Data:
+            <input class="datas" type="date" required name="data">
+            Hora de Inicio:
+            <input class="horas" type="time" required name="hora"> <br><br>
 			Enviar imagem:<br>
-			<input type="file" name="arquivos" accept="image/png, image/jpeg"  multiple /><br><br>
+			<input type="file" required name="arquivo" accept="image/*" /><br><br>
 			Descrição:<br>
-			<textarea name="message" rows="10" cols="60"></textarea><br><br>
+			<textarea name="descricao" required rows="10" cols="60"></textarea><br><br>
 			<input type="submit" value="Cadastrar">
 			<input type="reset" value="Apagar Campos">
 			</form></div></div>
