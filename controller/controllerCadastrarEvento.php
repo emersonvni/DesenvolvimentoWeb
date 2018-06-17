@@ -8,10 +8,6 @@
         echo 'conectou';
         mysqli_select_db($conecta, 'database');
 
-<<<<<<< HEAD
-=======
-        
->>>>>>> 533111a16531e6205fec655dd240f8326f5aaa68
         if (isset($_FILES['arquivo'])) {
             $extensao = strtolower(substr($_FILES['arquivo']['name'], -4)); //pega a extensão do arquivo
             if($extensao == 'jpeg'){
