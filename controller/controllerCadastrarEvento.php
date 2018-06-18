@@ -27,7 +27,7 @@
                                                     VALUES ('$nome','$data','$novoNome','$descricao')");
             if ($query) {
                 echo 'Cadastrado com sucesso';
-                header('Location: ../cadastrarEvento.php');
+                header("Location: desenvolvimento/painel.php");
             } else {
                 echo 'Não foi possivel efetuar o cadastro.';
                 echo mysqli_error($conecta);

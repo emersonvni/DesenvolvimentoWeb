@@ -35,7 +35,7 @@ function editarEvento(){
                                                   WHERE nome = '$nome'");
                     if ($query) {
                         echo 'Salvo com sucesso!';
-                        header('Location: ../index.php');
+                        header("Location: desenvolvimento/painel.php");
                     } else {
                         echo 'Não foi possivel salvar a edição.';
                         echo mysqli_error($conecta);
@@ -53,7 +53,7 @@ function editarEvento(){
                                                   WHERE nome = '$nome'");
                 if ($query) {
                     echo 'Salvo com sucesso!';
-                    header('Location: ../index.php');
+                    header("Location: desenvolvimento/painel.php");
                 } else {
                     echo 'Não foi possivel salvar a edição.';
                     echo mysqli_error($conecta);
