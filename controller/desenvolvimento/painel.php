@@ -15,7 +15,8 @@
 		echo "<br><br><br>";
 		echo "<center><strong>Você está Logado! :D</strong> </center>";
 		echo "<br><br>";
-		echo "<center><a href=\"busca.php\">Buscar e Editar</a></center>";
+		echo "<center><a href=\"busca.php\">Buscar e Editar Usuários</a></center>";
+        echo "<center><a href=\"../../buscarEvento.php\">Buscar ,Editar e Excluir Eventos</a></center>";
 		echo "<center><a href= \"excluir.php\"> Excluir </a></center>";
 			
 	}

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d27fc5c-536e-47a6-8d0b-865e31e99034" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/controllerBuscarEvento.php" afterPath="$PROJECT_DIR$/controller/controllerBuscarEvento.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/controllerEditarEvento.php" afterPath="$PROJECT_DIR$/controller/controllerEditarEvento.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/desenvolvimento/painel.php" afterPath="$PROJECT_DIR$/controller/desenvolvimento/painel.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllerBuscarEvento.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="controllerBuscarEvento.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/controllerBuscarEvento.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -68,6 +67,38 @@
                 <marker date="1529280555375" expanded="true" signature="713:1771" ph="..." />
                 <marker date="1529280555375" expanded="true" signature="713:1940" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autenticacao.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/desenvolvimento/autenticacao.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1529255792447" expanded="true" signature="512:574" ph="SELECT * FRO... usuarios" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="painel.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/desenvolvimento/painel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,6 +192,7 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/controller/controllerEditarEvento.php" />
         <option value="$PROJECT_DIR$/controller/controllerBuscarEvento.php" />
+        <option value="$PROJECT_DIR$/controller/desenvolvimento/painel.php" />
       </list>
     </option>
   </component>
@@ -366,12 +398,12 @@
       <workItem from="1528828153969" duration="6939000" />
       <workItem from="1529191964568" duration="17055000" />
       <workItem from="1529245517055" duration="12645000" />
-      <workItem from="1529261005761" duration="16860000" />
+      <workItem from="1529261005761" duration="17229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82022000" />
+    <option name="totallyTimeSpent" value="82391000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -416,14 +448,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -577,24 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/desenvolvimento/autenticacao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1529255792447" expanded="true" signature="512:574" ph="SELECT * FRO... usuarios" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -802,6 +808,32 @@
             <marker date="1529280555375" expanded="true" signature="713:1771" ph="..." />
             <marker date="1529280555375" expanded="true" signature="713:1940" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/desenvolvimento/autenticacao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1529255792447" expanded="true" signature="512:574" ph="SELECT * FRO... usuarios" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/desenvolvimento/painel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
