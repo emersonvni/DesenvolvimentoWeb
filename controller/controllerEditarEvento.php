@@ -11,27 +11,45 @@ function editarEvento(){
     $busca = mysqli_query($conecta,"SELECT * FROM evento WHERE nome = '$nome'");
     $registro = mysqli_fetch_array($busca);
     $arquivo = $registro['imagem'];
+    if ($busca) {
+        if (getEscolha()) {
+            if (getOpcao()) {
+                if (isset($_FILES['arquivo'])) {
+                    unlink("../uploads/" . "$arquivo");//deletando a imagem antiga do servidor
+                    $extensao = strtolower(substr($_FILES['arquivo']['name'], -4)); //pega a extensão do arquivo
+                    if ($extensao == 'jpeg') {
+                        $novoNome = md5(time()) . '.' . $extensao; // define o novo nome do arquivo
+                    } else {
+                        $novoNome = md5(time()) . $extensao; // define o novo nome do arquivo
+                    }
 
-    if (getEscolha()) {
-        if (getOpcao()) {
-            if (isset($_FILES['arquivo'])) {
-                unlink("../uploads/" . "$arquivo");//deletando a imagem antiga do servidor
-                $extensao = strtolower(substr($_FILES['arquivo']['name'], -4)); //pega a extensão do arquivo
-                if ($extensao == 'jpeg') {
-                    $novoNome = md5(time()) . '.' . $extensao; // define o novo nome do arquivo
+                    $diretorio = "../uploads/"; //define o diretorio para onde será enviado o arquivo
+
+                    move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio . $novoNome);//efetua o upload
+
+                    $data = getData() . " " . getHora() . ":00"; // concatenando a data
+                    $nome = getNome();
+                    $descricao = getDescricao();
+                    $query = mysqli_query($conecta, "UPDATE evento
+                                                  SET data = '$data', imagem = '$novoNome', descricao = '$descricao'
+                                                  WHERE nome = '$nome'");
+                    if ($query) {
+                        echo 'Salvo com sucesso!';
+                        header('Location: ../index.php');
+                    } else {
+                        echo 'Não foi possivel salvar a edição.';
+                        echo mysqli_error($conecta);
+                    }
+
                 } else {
-                    $novoNome = md5(time()) . $extensao; // define o novo nome do arquivo
+                    echo '<p> arquivo não selecionado</p>';
                 }
-
-                $diretorio = "../uploads/"; //define o diretorio para onde será enviado o arquivo
-
-                move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio . $novoNome);//efetua o upload
-
+            } else {
                 $data = getData() . " " . getHora() . ":00"; // concatenando a data
                 $nome = getNome();
                 $descricao = getDescricao();
                 $query = mysqli_query($conecta, "UPDATE evento
-                                                  SET data = '$data', imagem = '$novoNome', descricao = '$descricao'
+                                                  SET data = '$data', descricao = '$descricao'
                                                   WHERE nome = '$nome'");
                 if ($query) {
                     echo 'Salvo com sucesso!';
@@ -41,28 +59,14 @@ function editarEvento(){
                     echo mysqli_error($conecta);
                 }
 
-            } else {
-                echo '<p> arquivo não selecionado</p>';
             }
         } else {
-            $data = getData() . " " . getHora() . ":00"; // concatenando a data
-            $nome = getNome();
-            $descricao = getDescricao();
-            $query = mysqli_query($conecta, "UPDATE evento
-                                                  SET data = '$data', descricao = '$descricao'
-                                                  WHERE nome = '$nome'");
-            if ($query) {
-                echo 'Salvo com sucesso!';
-                header('Location: ../index.php');
-            } else {
-                echo 'Não foi possivel salvar a edição.';
-                echo mysqli_error($conecta);
-            }
-
+            ExcluirEvento($nome, $arquivo);
         }
     }
     else{
-        ExcluirEvento($nome, $arquivo);
+        echo '<p> Registro não encontrado!</p>';
+        echo mysqli_error($conecta);
     }
 }
 
@@ -133,7 +137,7 @@ function getOpcao(){
 }
 
 function getEscolha(){
-    if ($_POST["escolha"] == "Salvar"){
+    if ($_POST["escolha"] == "Salvar Alterações"){
         return true;
     }
     else {

@@ -116,11 +116,32 @@ textarea{
     border: 3px solid #2F4F4F;
     text-align: center;
 }
-
 .col input{
     width: 80%;
 }
 .col img{
+    width: 100%;
+    height: auto;
+}
+.result{
+    background-color: #f1f1f1;
+    display: inline-grid;
+    width: 50%;
+    margin:20px 0px 20px 20px;
+    padding: 20px;
+    border: 3px solid #2F4F4F;
+    text-align: center;
+}
+.result input{
+    width: 22%;
+}
+.result input[type=radio]{
+    width: 4%;
+}
+.result input[type=text]{
+    width: 70%;
+}
+.result img{
     width: 100%;
     height: auto;
 }
