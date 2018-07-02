@@ -6,7 +6,7 @@
 			//Tratamento das variáveis
 			$nome=ucwords(strtolower($nome));
 			$endereco=ucwords(strtolower($endereco));
-			$senha=sha1($senha."hxtutors");
+			$senha=sha1($senha."desenvolvimentoWeb");
 			//Inserção no banco de dados
 			$validaremail=mysqli_query($conectar,"SELECT * FROM usuarios WHERE email='$email'");
 			$contar=mysqli_num_rows($validaremail);
@@ -16,7 +16,7 @@
 			// nivel 2 é adminitrador, status 1 é ativo caso queira mudar para 0 fica bloqueado, porém não foi implementado.
 			}
 			if(isset($insert)){
-				$flash="Cadastro realizado com sucesso, aguarde a nossa aprovação!";
+				$flash="Cadastro realizado com sucesso!";
 			}else{
 				if(empty($flash)){
 				$flash="Ops! Houve um erro em nosso sistema, contate o administrador!";

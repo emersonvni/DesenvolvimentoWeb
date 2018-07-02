@@ -22,28 +22,14 @@
     <a href="cadastrarUsuario.php">Cadastrar Usuário</a>
 </div>
 
-<div class="row" align="center">
-  
-  <div>
-    	
-			<form name="login" method="post" action="controller\desenvolvimento\cadastrando.php">
-			  <br><br><br><br>
-			  Nome:<br>
-			  <input type="text" name="nome"><br><br>	
-			  Endereço:<br>
-			  <input type="text" name="endereco"><br><br>	
-			  Informe o E-mail:<br>
-			  <input type="text" name="email"><br><br>				  		  
-			  Digite a senha:<br>
-			  <input type="password" name="senha"><br><br>			  
-			  <input type="submit" value="Cadastrar">
-			  <input type="reset" value="Apagar Campos">
-			 
-			 
-
-			</form></div>
-  
-</div>
+<?php
+include("includes/header.php");
+if(isset($logado)){
+	include("views/home.php");
+}else{
+	include("views/cadastro.php");
+}
+?>
 <br><br><br><br><br>
 
 <div class="footer">

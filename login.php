@@ -22,23 +22,18 @@
     <a href="cadastrarUsuario.php">Cadastrar Usuário</a>
 </div>
 
-<div class="row" align="center">
-  <div align="center">
-    <br><br>
-		<form name="loginform" method="post" action="controller\desenvolvimento\autenticacao.php">
-			<br><br><br>
-			Email:<br>
-			<input type="text" name="email"><br><br>
-			Senha:<br>
-			<input type="password" name="senha"><br><br>
-			<input type="submit" value="Entrar">
-			<input type="submit" value="Cancelar">
-		</form>
-			
-  </div>
+ <?php
+	include("includes/header.php");
+
+	if(isset($logado)){
+		include("views/home.php");
+	}else{
+		include("views/login.php");
+	}
+?>
   
-</div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="footer">
 
   <p>Footer</p>
