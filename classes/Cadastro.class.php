@@ -26,6 +26,32 @@
 			//Retorno para o usuário
 			echo $flash;
 		}
+		
+		public function editar($id, $nome, $endereco, $email){
+			$conectar=new DB;
+			$conectar=$conectar->conectar();
+			//Tratamento das variáveis
+			$nome=ucwords(strtolower($nome));
+			$endereco=ucwords(strtolower($endereco));
+			//Inserção no banco de dados
+			$validaremail=mysqli_query($conectar,"SELECT * FROM usuarios WHERE email='$email'");
+			$contar=mysqli_num_rows($validaremail);
+			if($contar == 0){
+				$update=mysqli_query($conectar,"UPDATE usuarios SET nome='$nome',endereco ='$endereco', email ='$email' WHERE id='$id';");}else{
+				
+				
+			}
+			if(isset($insert)){
+				$flash="Usuario atualizado com sucesso!";
+			}else{
+				if(empty($flash)){
+				$flash="Ops! Houve um erro em nosso sistema, contate o administrador!";
+				}
+			}
+			
+			//Retorno para o usuário
+			echo $flash;
+		}
 	
 	}
 

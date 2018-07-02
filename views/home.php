@@ -15,11 +15,11 @@ include("header.php");
 			<table width="100%" border="0">
             	<tr>
                 	<th>Nome</th>
-                    <th>Status</th>
-                    <th>Ação</th>
+                    <th>Endereço</th>
+                    <th>Email</th>
                 </tr>
                 <?php
-				$buscarusuarios=mysqli_query($conectar,"SELECT * FROM usuarios WHERE nivel='1'");
+				$buscarusuarios=mysqli_query($conectar,"SELECT * FROM usuarios");
 				if(mysqli_num_rows($buscarusuarios) == 0){
 				echo"Nenhum usuário cadastrado no sistema!";
 				}else{
@@ -27,17 +27,28 @@ include("header.php");
 				?>
                 <tr>
                 	<td><?php echo $linha["nome"];?></td>
-                    <td><?php echo $linha["status"];?></td>
-                    <td><?php $id=$linha["id"]; if($linha["status"] == 0){ echo "<a href=\"login.php?acao=aprovar&amp;id=$id\">Aprovar</a>";}else{echo"<a href=\"login.php?acao=bloquear&amp;id=$id\">Bloquear</a>";}?></td>
+                    <td><?php echo $linha["endereco"];?></td>
+					<td><?php echo $linha["email"];?></td>
+                    <td><?php 
+							  $id=$linha["id"];							  
+							  $nome=$linha["nome"];
+							  $endereco=$linha["endereco"];
+							  $email=$linha["email"];
+							  if($linha["status"] == 1){
+								  echo "<a href=\"views/editar.php?id=$id&nome=$nome&endereco=$endereco&email=$email\">Editar</a>";
+							  }
+						?>
+					</td>
                 </tr>
 				<tr></tr>
-				<tr><td><a href="login.php?acao=logout" title="Fazer logout!">Logout &raquo;</a></td></tr>
+				
                 <?php } }?>
             </table>
 			
             <?php }else{?>
             <p>Usuário comum</p>
             <?php }?>
+			<a href="login.php?acao=logout" title="Fazer logout!">Logout &raquo;</a>
         <!--acomodar-->
         </div>
 		

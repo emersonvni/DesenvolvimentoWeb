@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sistema de Login</title>
+	<title>Editar Usuário</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -9,8 +9,8 @@
 <body>
 
 <div class="headerad">
-  <h1>Login</h1>
-
+  <h1>Editar de Usuário</h1>
+  
 </div>
 
 <div class="topnav">
@@ -22,19 +22,17 @@
     <a href="cadastrarUsuario.php">Cadastrar Usuário</a>
 </div>
 
- <?php
+<?php
 include("includes/header.php");
 if(isset($logado)){
 	include("views/home.php");
 }else{
-	include("views/login.php");
+	include("views/editar.php");
 }
 ?>
-  
+<br><br><br><br><br>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="footer">
-
   <p>Footer</p>
 </div>
   
