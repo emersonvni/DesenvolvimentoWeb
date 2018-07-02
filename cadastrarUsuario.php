@@ -30,8 +30,7 @@ if(isset($logado)){
 	include("views/cadastro.php");
 }
 ?>
-<br><br><br><br><br>
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="footer">
   <p>Footer</p>
 </div>
