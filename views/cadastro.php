@@ -3,6 +3,7 @@ $page="Desenvolvimento Web - Cadastro";
 include("header.php");
 ?>
 
+
 	<div id="login" class="form bradius" style="top:150px;">
     	<div class="message bradius " style="<?php echo $display;?>"><?php echo $msg;?></div>        
         <div class="acomodar">
@@ -17,5 +18,3 @@ include("header.php");
         </div>
        <!--login-->
     </div><br><br><br>
-</body>
-</html>

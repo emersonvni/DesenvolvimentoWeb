@@ -34,12 +34,10 @@
 			$nome=ucwords(strtolower($nome));
 			$endereco=ucwords(strtolower($endereco));
 			//Inserção no banco de dados
-			$validaremail=mysqli_query($conectar,"SELECT * FROM usuarios WHERE email='$email'");
+			$validaremail=mysqli_query($conectar,"SELECT * FROM usuarios WHERE id='$id'");
 			$contar=mysqli_num_rows($validaremail);
 			if($contar == 0){
-				$update=mysqli_query($conectar,"UPDATE usuarios SET nome='$nome',endereco ='$endereco', email ='$email' WHERE id='$id';");}else{
-				
-				
+				$update=mysqli_query($conectar,"UPDATE usuarios SET nome='$nome',endereco ='$endereco', email ='$email' WHERE id='$id';");
 			}
 			if(isset($insert)){
 				$flash="Usuario atualizado com sucesso!";

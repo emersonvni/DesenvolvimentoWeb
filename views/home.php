@@ -35,7 +35,7 @@ include("header.php");
 							  $endereco=$linha["endereco"];
 							  $email=$linha["email"];
 							  if($linha["status"] == 1){
-								  echo "<a href=\"views/editar.php?id=$id&nome=$nome&endereco=$endereco&email=$email\">Editar</a>";
+								  echo "<a href=\"editarUsuario.php?id=$id&nome=$nome&endereco=$endereco&email=$email\">Editar</a>";
 							  }
 						?>
 					</td>

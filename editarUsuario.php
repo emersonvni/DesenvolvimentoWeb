@@ -25,7 +25,7 @@
 <?php
 include("includes/header.php");
 if(isset($logado)){
-	include("views/home.php");
+	include("views/editar.php");
 }else{
 	include("views/editar.php");
 }

@@ -1,19 +1,4 @@
 <?php
-$conectar=new DB;
-$conectar=$conectar->conectar();
-/*if($startaction == 1 && $acao == "editar"){
-		if($nivel == 2){
-			if(isset($_GET["id"])){
-				$id=$_GET["id"];
-				$nome=$_POST["nome"];
-				$endereco=isset($_POST["endereco"]);
-				$email=isset($_POST["email"]);
-			}
-		}
-}*/
-
-
-
 if($startaction == 1 && $acao == "editar"){
 		$id=$_GET["id"];
 		$nome=$_GET["nome"];
@@ -31,7 +16,7 @@ if($startaction == 1 && $acao == "editar"){
 				//Executa a classe de cadastro
 				$conectar=new Cadastro;
 				echo"<div class=\"flash\">";
-				$conectar=$conectar->editar($nome, $endereco, $email); 
+				$conectar=$conectar->editar($id,$nome, $endereco, $email); 
 				echo"</div>";
 			}
 			

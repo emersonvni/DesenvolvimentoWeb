@@ -20,7 +20,6 @@ include("controllers/cadastro.php");
 include("controllers/login.php");
 include("controllers/logout.php");
 include("controllers/check.php");
-include("controllers/bloquear.php");
 include("controllers/style.php");
 include("controllers/editar.php");
 
