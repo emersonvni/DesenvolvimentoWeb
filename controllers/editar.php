@@ -15,7 +15,7 @@ $conectar=$conectar->conectar();
 
 
 if($startaction == 1 && $acao == "editar"){
-		$id=$_GET["id"]
+		$id=$_GET["id"];
 		$nome=$_GET["nome"];
 		$endereco=$_GET["endereco"];
 		$email=$_GET["email"];			
@@ -41,5 +41,5 @@ if($startaction == 1 && $acao == "editar"){
 			}
 		}
 		
-}*/
+}
 ?> 

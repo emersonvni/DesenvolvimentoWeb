@@ -4,39 +4,8 @@
 
     function cadastrarEvento(){
 
-        $conecta = mysqli_connect('localhost', 'root', '');
-        echo 'conectou';
-        mysqli_select_db($conecta, 'database');
-
-        if (isset($_FILES['arquivo'])) {
-            $extensao = strtolower(substr($_FILES['arquivo']['name'], -4)); //pega a extensão do arquivo
-            if($extensao == 'jpeg'){
-                $novoNome = md5(time()) . '.'.$extensao; // define o novo nome do arquivo
-            }else{
-                $novoNome = md5(time()) . $extensao; // define o novo nome do arquivo
-            }
-
-            $diretorio = "../uploads/"; //define o diretorio para onde será enviado o arquivo
-
-            move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio . $novoNome);//efetua o upload
-
-            $data = getData()." ".getHora().":00"; // concatenando a data
-            $nome = getNome();
-            $descricao = getDescricao();
-            $query = mysqli_query($conecta,"INSERT INTO evento (nome, data, imagem, descricao) 
-                                                    VALUES ('$nome','$data','$novoNome','$descricao')");
-            if ($query) {
-                echo 'Cadastrado com sucesso';
-                header("Location: desenvolvimento/painel.php");
-            } else {
-                echo 'Não foi possivel efetuar o cadastro.';
-                echo mysqli_error($conecta);
-            }
-
-        }
-        else{
-            echo '<p> arquivo não selecionado</p>';
-        }
+        $anuncio = new AnuncioModel(getNome(), getDescricao(), $_FILES['arquivo']['name'], getData()." ".getHora().":00");
+        $anuncio::cadastrarAnuncio($_FILES['arquivo']['tmp_name']);
     }
 
     function test_input($data){

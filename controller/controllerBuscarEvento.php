@@ -8,26 +8,25 @@
 
 <?php
 
-    $conecta = mysqli_connect('localhost', 'root', '');
-    mysqli_select_db($conecta, 'database');
+    include("../model/AnuncioModel.php");
 
+$conectar = mysqli_connect('localhost', 'root', '');
+mysqli_select_db($conectar, 'database');
 
     $nome = $_POST['nome'];
-    $busca = mysqli_query($conecta,"SELECT * FROM evento WHERE nome = '$nome'");
-    $registro = mysqli_fetch_array($busca);
-
+    $registro = AnuncioModel::buscarAnuncio($nome);
 
     $descricao = $registro['descricao'];
     $arquivo = $registro['imagem'];
     $data = $registro['data'];
 
-    if($busca) {
+    if($registro != false) {
         echo '
         <div class="result">
         <h1>Resultado da Busca:</h1>
         <form method="post" action="controllerEditarEvento.php" enctype="multipart/form-data">
                 Nome:
-                <input type="text" required name="nome" placeholder="Nome*" value="' . $nome . '"><br><br>
+                <input type="text" required name="nome" placeholder="Nome*" value="' . $nome . '"><br>Obs: O nome do Anúncio não pode ser alterado.<br><br>
                 Data:
                 <input class="datas" type="date" required name="data" value="' . substr($data, 0, 10) . '">
                 Hora de Inicio:
@@ -50,7 +49,7 @@
     }
     else{
         echo '<p> Registro não encontrado!</p>';
-        echo mysqli_error($conecta);
+        echo mysqli_error($conectar);
     }
 ?>
 

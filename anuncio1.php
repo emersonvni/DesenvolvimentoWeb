@@ -27,14 +27,10 @@
 			<div align="center">
 
                 <?php
-                // Aqui você se conecta ao banco
-                $conecta = mysqli_connect('localhost', 'root', '');
-                mysqli_select_db($conecta, 'database');
-
+                include ("model/AnuncioModel.php");
                 // Executa uma consulta
                 $nome = $_POST['nome'];
-                $busca = mysqli_query($conecta,"SELECT * FROM evento WHERE nome = '$nome'");
-                $registro = mysqli_fetch_array($busca);
+                $registro = AnuncioModel::buscarAnuncio($nome);
 
 
                 $descricao = $registro['descricao'];
