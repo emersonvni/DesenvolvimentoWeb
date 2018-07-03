@@ -21,7 +21,6 @@
   <a href="anuncio.php">Anúncios</a>
   <a href="login.php">Login</a>
   <a href="cadastrarUsuario.php">Cadastrar Usuário</a>
-    <a href="buscarEvento.php">buscarEvento</a>
 </div>
 
 <div class="row">
